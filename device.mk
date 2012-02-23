@@ -56,6 +56,15 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# Release name
+PRODUCT_RELEASE_NAME := Vibrant
+
+# Inherit some common AOKP stuff.
+$(call inherit-product, vendor/aokp/configs/common_phone.mk)
+$(call inherit-product, vendor/aokp/configs/common.mk)
+$(call inherit-product, vendor/aokp/configs/common_facelock.mk)
+#$(call inherit-product, vendor/aokp/configs/common_gapps.mk)
+
 # Inherit Aries common device configuration.
 $(call inherit-product, device/samsung/aries-common/device_base.mk)
 
@@ -64,3 +73,12 @@ $(call inherit-product, device/samsung/aries-common/device_base.mk)
 # of the aspects that require proprietary drivers that aren't
 # commonly available
 $(call inherit-product-if-exists, vendor/samsung/vibrantmtd/vibrantmtd-vendor.mk)
+
+## Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := vibrant
+PRODUCT_NAME := aokp_vibrantmtd
+PRODUCT_BRAND := samsung
+PRODUCT_MODEL := SGH-T959
+
+#Set build fingerprint / ID / Prduct Name ect.
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=Vibrant TARGET_DEVICE=vibrantmtd BUILD_ID=ICS BUILD_FINGERPRINT=samsung/GT-I9000/GT-I9000:2.3.5/GINGERBREAD/XXJVT:user/release-keys PRIVATE_BUILD_DESC="GT-I9000-user 2.3.5 GINGERBREAD XXJVT release-keys"

@@ -31,7 +31,7 @@ BOARD_FM_DEVICE := si4709
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/vibrantmtd/recovery/recovery_keys.c
 
-TARGET_OTA_ASSERT_DEVICE := vibrant,vibrantmtd,T959
+TARGET_OTA_ASSERT_DEVICE := vibrant,vibrantmtd,SGH-T959
 
 # Import the aries-common BoardConfigCommon.mk
 include device/samsung/aries-common/BoardConfigCommon.mk
