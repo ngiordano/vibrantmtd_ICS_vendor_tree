@@ -23,11 +23,6 @@ BOARD_SECOND_CAMERA_DEVICE := /dev/video2
 #Prebuilt Kernel
 TARGET_PREBUILT_KERNEL := device/samsung/vibrantmtd/kernel
 
-# FM Radio
-BOARD_HAVE_FM_RADIO := true
-BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
-BOARD_FM_DEVICE := si4709
-
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/vibrantmtd/recovery/recovery_keys.c
 
