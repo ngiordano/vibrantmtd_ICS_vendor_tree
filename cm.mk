@@ -4,15 +4,16 @@ $(call inherit-product, device/samsung/vibrantmtd/full_vibrantmtd.mk)
 PRODUCT_RELEASE_NAME := Vibrant
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/aokp/products/common_phone.mk)
-$(call inherit-product, vendor/aokp/products/common.mk)
-$(call inherit-product, vendor/aokp/products/common_drm.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/gsm.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vibrantmtd
 PRODUCT_NAME := cm_vibrantmtd
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := T959
+PRODUCT_MODEL := SGH-T959
 
 #Set build fingerprint / ID / Prduct Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=Vibrant TARGET_DEVICE=T959 BUILD_ID=ICS BUILD_FINGERPRINT=samsung/GT-I9000/GT-I9000:2.3.5/GINGERBREAD/XXJVT:user/release-keys PRIVATE_BUILD_DESC="GT-I9000-user 2.3.5 GINGERBREAD XXJVT release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=SGH-T959 TARGET_DEVICE=SGH-T959 BUILD_ID=GINGERBREAD BUILD_FINGERPRINT=google/soju/crespo:2.3.4/GRJ22/121341:user/release-keys PRIVATE_BUILD_DESC="soju-user 2.3.4 GRJ22 121341 release-keys"
